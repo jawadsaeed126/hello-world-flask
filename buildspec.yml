@@ -28,7 +28,7 @@ phases:
       # - Give your container name
       - DOCKER_CONTAINER_NAME="test-python-container"
       - echo Writing image definitions file...
-      - printf '[{"name":"CONTAINER_NAME","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"DOCKER_CONTAINER_NAME","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 
 artifacts:
   files: imagedefinitions.json
