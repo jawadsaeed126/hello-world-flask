@@ -25,6 +25,8 @@ phases:
       - echo Pushing the Docker image...
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - docker push $REPOSITORY_URI:latest
+      # - Give your container name
+      - DOCKER_CONTAINER_NAME="test-python-container"
       - echo Writing image definitions file...
       - printf '[{"name":"CONTAINER_NAME","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 
